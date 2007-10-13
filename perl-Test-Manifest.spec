@@ -2,7 +2,7 @@
 
 Summary:	Test::Manifest - interact with a t/test_manifest file
 Name:		perl-%{real_name}
-Version:	1.17
+Version:	1.21
 Release: %mkrel 1
 License:	GPL or Artistic
 Group:		Development/Perl
