@@ -2,12 +2,12 @@
 
 Summary:	Test::Manifest - interact with a t/test_manifest file
 Name:		perl-%{real_name}
-Version:	1.21
+Version:	1.22
 Release: %mkrel 1
 License:	GPL or Artistic
 Group:		Development/Perl
 URL:		http://search.cpan.org/dist/%{real_name}
-Source0:	http://search.cpan.org/CPAN/authors/id/B/BD/BDFOY/%{real_name}-%{version}.tar.bz2
+Source0:	http://search.cpan.org/CPAN/authors/id/B/BD/BDFOY/%{real_name}-%{version}.tar.gz
 BuildRequires:	perl-devel
 BuildRequires:	perl-Test-Pod
 BuildArch:	noarch
