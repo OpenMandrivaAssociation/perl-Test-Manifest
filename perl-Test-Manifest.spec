@@ -11,6 +11,7 @@ Source0:	http://search.cpan.org/CPAN/authors/id/B/BD/BDFOY/%{real_name}-%{versio
 BuildRequires:	perl-devel
 BuildRequires:	perl-Test-Pod
 BuildArch:	noarch
+BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 
 %description
 Test::Harness assumes that you want to run all of the .t files in the
