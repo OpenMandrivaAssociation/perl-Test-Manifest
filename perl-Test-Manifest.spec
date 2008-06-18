@@ -3,7 +3,7 @@
 Summary:	Test::Manifest - interact with a t/test_manifest file
 Name:		perl-%{real_name}
 Version:	1.22
-Release: %mkrel 1
+Release: %mkrel 2
 License:	GPL or Artistic
 Group:		Development/Perl
 URL:		http://search.cpan.org/dist/%{real_name}
