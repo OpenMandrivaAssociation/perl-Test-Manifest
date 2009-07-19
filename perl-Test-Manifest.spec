@@ -1,17 +1,18 @@
-%define real_name Test-Manifest
+%define upstream_name       Test-Manifest
+%define upstream_version    1.23
 
-Summary:	Test::Manifest - interact with a t/test_manifest file
-Name:		perl-%{real_name}
-Version:	1.22
-Release: %mkrel 2
+Name:       perl-%{upstream_name}
+Version:    %perl_convert_version %{upstream_version}
+Release:    %mkrel 1
+Summary:	Interact with a t/test_manifest file
 License:	GPL or Artistic
 Group:		Development/Perl
-URL:		http://search.cpan.org/dist/%{real_name}
-Source0:	http://search.cpan.org/CPAN/authors/id/B/BD/BDFOY/%{real_name}-%{version}.tar.gz
-BuildRequires:	perl-devel
+Url:        http://search.cpan.org/dist/%{upstream_name}
+Source:     http://www.cpan.org/modules/by-module/Test/%{upstream_name}-%{upstream_version}.tar.gz
+Patch:      Test-Manifest-1.23-force-man-pages.patch
 BuildRequires:	perl-Test-Pod
 BuildArch:	noarch
-BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
+BuildRoot:	%{_tmppath}/%{name}-%{version}
 
 %description
 Test::Harness assumes that you want to run all of the .t files in the
@@ -28,18 +29,9 @@ file to find out which tests you want to run and the order in which
 you want to run them.  It constructs the right value for MakeMaker to
 do the right thing.
 
-In t/test_manifest, simply list the tests that you want to run.  Their
-order in the file is the order in which they run.  You can comment
-lines with a #, just like in Perl, and Test::Manifest will strip
-leading and trailing whitespace from each line.  It also checks that
-the specified file is actually in the t/ directory.  If the file does
-not exist, it does not put its name in the list of test files to run.
-
-Optionally, you can add a number after the test name in test_manifest
-to define sets of tests. See get_t_files() for more information.
-
 %prep
-%setup -q -n %{real_name}-%{version} 
+%setup -q -n %{upstream_name}-%{upstream_version} 
+%patch -p 1
 
 %build
 %{__perl} Makefile.PL INSTALLDIRS=vendor
@@ -58,7 +50,6 @@ rm -rf %{buildroot}
 %files
 %defattr(-,root,root)
 %doc Changes README
-%{perl_vendorlib}/Test/Manifest.pm
-%{_mandir}/*/*
-
+%{perl_vendorlib}/Test
+%{_mandir}/man3/*
 
