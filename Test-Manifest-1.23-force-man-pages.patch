@@ -1,0 +1,14 @@
+Les sous-répertoires Test-Manifest-1.23/examples et Test-Manifest-1.23-force-man-pages/examples sont identiques.
+Les sous-répertoires Test-Manifest-1.23/lib et Test-Manifest-1.23-force-man-pages/lib sont identiques.
+diff -Nau -x '*~' Test-Manifest-1.23/Makefile.PL Test-Manifest-1.23-force-man-pages/Makefile.PL
+--- Test-Manifest-1.23/Makefile.PL	2009-07-17 10:05:50.000000000 +0200
++++ Test-Manifest-1.23-force-man-pages/Makefile.PL	2009-07-19 11:09:12.000000000 +0200
+@@ -20,7 +20,5 @@
+ 		'lib/Manifest.pm'  => '$(INST_LIBDIR)/Manifest.pm',
+ 		},
+ 	  
+-	'MAN3PODS' => {},
+-		
+ 	clean => { FILES => 'Test-Manifest-* t/test_manifest' },
+ 	);
+Les sous-répertoires Test-Manifest-1.23/t et Test-Manifest-1.23-force-man-pages/t sont identiques.
