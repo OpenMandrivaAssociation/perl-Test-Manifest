@@ -1,10 +1,10 @@
 %define modname	Test-Manifest
-%define modver	1.23
+%define modver 2.02
 
 Summary:	Interact with a t/test_manifest file
 Name:		perl-%{modname}
 Version:	%perl_convert_version %{modver}
-Release:	13
+Release:	1
 License:	GPLv2 or Artistic
 Group:		Development/Perl
 Url:		http://search.cpan.org/dist/%{modname}
@@ -47,4 +47,3 @@ make test
 %doc Changes README
 %{perl_vendorlib}/Test
 %{_mandir}/man3/*
-
