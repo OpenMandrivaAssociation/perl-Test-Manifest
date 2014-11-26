@@ -1,18 +1,18 @@
-%define modname	Test-Manifest
-%define modver	1.23
+%define upstream_name       Test-Manifest
+%define upstream_version 2.02
 
+Name:		perl-%{upstream_name}
+Version:	%perl_convert_version %{upstream_version}
+Release:	1
 Summary:	Interact with a t/test_manifest file
-Name:		perl-%{modname}
-Version:	%perl_convert_version %{modver}
-Release:	13
-License:	GPLv2 or Artistic
+
+License:	GPL or Artistic
 Group:		Development/Perl
-Url:		http://search.cpan.org/dist/%{modname}
-Source0:	http://www.cpan.org/modules/by-module/Test/%{modname}-%{modver}.tar.gz
-Patch0:		Test-Manifest-1.23-force-man-pages.patch
-BuildArch:	noarch
+Url:		http://search.cpan.org/dist/%{upstream_name}
+Source:		http://www.cpan.org/modules/by-module/Test/%{upstream_name}-%{upstream_version}.tar.gz
 BuildRequires:	perl-Test-Pod
 BuildRequires:	perl-devel
+BuildArch:	noarch
 
 %description
 Test::Harness assumes that you want to run all of the .t files in the
@@ -30,8 +30,7 @@ you want to run them.  It constructs the right value for MakeMaker to
 do the right thing.
 
 %prep
-%setup -qn %{modname}-%{modver} 
-%apply_patches
+%setup -q -n %{upstream_name}-%{upstream_version} 
 
 %build
 %__perl Makefile.PL INSTALLDIRS=vendor
@@ -47,4 +46,3 @@ make test
 %doc Changes README
 %{perl_vendorlib}/Test
 %{_mandir}/man3/*
-

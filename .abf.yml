@@ -1,2 +1,4 @@
+removed_sources:
+  Test-Manifest-1.23.tar.gz: 2c6b99088c3257fb47eb2afa4c31cb3af6c2f8f3
 sources:
-  "Test-Manifest-1.23.tar.gz": 2c6b99088c3257fb47eb2afa4c31cb3af6c2f8f3
+  Test-Manifest-2.02.tar.gz: 1430f8bc47b0e5dd8ce65d683360505e413abbaa
