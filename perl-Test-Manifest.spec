@@ -1,15 +1,14 @@
 %define upstream_name       Test-Manifest
-%define upstream_version 2.02
 
 Name:		perl-%{upstream_name}
-Version:	%perl_convert_version %{upstream_version}
+Version:	2.023
 Release:	1
 Summary:	Interact with a t/test_manifest file
 
 License:	GPL or Artistic
 Group:		Development/Perl
 Url:		http://search.cpan.org/dist/%{upstream_name}
-Source:		http://www.cpan.org/modules/by-module/Test/%{upstream_name}-%{upstream_version}.tar.gz
+Source:		http://www.cpan.org/modules/by-module/Test/%{upstream_name}-%{version}.tar.gz
 BuildRequires:	perl-Test-Pod
 BuildRequires:	perl-devel
 BuildArch:	noarch
@@ -30,19 +29,19 @@ you want to run them.  It constructs the right value for MakeMaker to
 do the right thing.
 
 %prep
-%setup -q -n %{upstream_name}-%{upstream_version} 
+%autosetup -p1 -n %{upstream_name}-%{version}
+perl Makefile.PL INSTALLDIRS=vendor
 
 %build
-%__perl Makefile.PL INSTALLDIRS=vendor
-%make
+%make_build
 
 %check
 make test
 
 %install
-%makeinstall_std
+%make_install
 
 %files
-%doc Changes README
+%doc Changes
 %{perl_vendorlib}/Test
 %{_mandir}/man3/*
