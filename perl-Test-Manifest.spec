@@ -2,7 +2,7 @@
 
 Name:		perl-%{upstream_name}
 Version:	2.023
-Release:	1
+Release:	2
 Summary:	Interact with a t/test_manifest file
 
 License:	GPL or Artistic
