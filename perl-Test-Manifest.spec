@@ -1,8 +1,8 @@
 %define upstream_name       Test-Manifest
 
 Name:		perl-%{upstream_name}
-Version:	2.023
-Release:	2
+Version:	2.024
+Release:	1
 Summary:	Interact with a t/test_manifest file
 
 License:	GPL or Artistic
