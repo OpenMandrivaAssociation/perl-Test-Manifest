@@ -7,7 +7,7 @@ Summary:	Interact with a t/test_manifest file
 
 License:	GPL or Artistic
 Group:		Development/Perl
-Url:		http://search.cpan.org/dist/%{upstream_name}
+Url:		https://search.cpan.org/dist/%{upstream_name}
 Source:		http://www.cpan.org/modules/by-module/Test/%{upstream_name}-%{version}.tar.gz
 BuildRequires:	perl-Test-Pod
 BuildRequires:	perl-devel
