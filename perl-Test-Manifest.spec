@@ -1,7 +1,7 @@
 %define upstream_name       Test-Manifest
 
 Name:		perl-%{upstream_name}
-Version:	2.024
+Version:	2.025
 Release:	1
 Summary:	Interact with a t/test_manifest file
 
