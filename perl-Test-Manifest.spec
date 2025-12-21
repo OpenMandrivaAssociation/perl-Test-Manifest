@@ -9,6 +9,7 @@ License:	GPL or Artistic
 Group:		Development/Perl
 Url:		https://search.cpan.org/dist/%{upstream_name}
 Source:		http://www.cpan.org/modules/by-module/Test/%{upstream_name}-%{version}.tar.gz
+BuildRequires:	make
 BuildRequires:	perl-Test-Pod
 BuildRequires:	perl-devel
 BuildArch:	noarch
